@@ -1,0 +1,24 @@
+Operators work by extending the Kubernetes control plane and API. In its simplest form, an Operator adds an endpoint to the Kubernetes API, called a custom resource(CR)
+
+An Operator is a custom Kubernetes controller watching a CR type and takingapplication-specific actions to make reality match the spec in that resource
+
+Operators extend two key Kubernetes concepts: resources and controllers. The Kubernetes API includes a mechanism, the CRD, for defining new resources
+
+A service account is a special type ofcluster user for authorizing programs instead of people
+
+Roles and Role‐Bindings are also restricted to a namespace. ClusterRoles and ClusterRoleBindings are their cluster-wide equivalents
+
+Operator Lifecycle Manager (OLM) is an Operator that installs, manages,and upgrades other Operators.
+Operator Metering is a metrics system that accounts for Operators’ use of cluster resources
+
+Operator Lifecycle Manager takes the Operator pattern one level up the stack: it’s an Operator that acquires, deploys, and manages Operators on a Kubernetes cluster.
+
+OLM defines a schema for Operator metadata, called the Cluster Service Version (CSV), for describing an Operator and its dependencies. Operators with a CSV can be listed as entries in a catalog available to OLM running on a Kubernetes cluster.
+
+Users then subscribe to an Operator from the catalog to tell OLM to provision and manage a desired Operator. That Operator, in turn, provisions and manages its application or service on the cluster.
+
+Operator Metering is a system for analyzing the resource usage of the Operators running on Kubernetes clusters. Metering analyzes Kubernetes CPU, memory, and other resource metrics to calculate costs for infrastructure services.
+
+The Helm project allows users to define their cluster resources in a formatted text file and deploy them through the Helm command-line tools. Ansible is a
+popular automation engine for creating reusable scripts for provisioning and configuring a group of resources.
+
